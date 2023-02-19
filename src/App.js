@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Games from "./components/games";
+import Navbar from "./components/navbar";
+import OurSponsors from "./components/our-sponsors";
+import Pages from "./components/pages";
+import Team from "./components/team";
+import About from "./components/about";
+import { styles } from "./util/style";
+import Shop from "./components/shop";
+import SearchingPanel from "./components/searching-panel";
+import Footer from "./components/footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full overflow-hidden">
+      <div className={styles.container}>
+        {/* Navbar */}
+        <Navbar />
+        {/* Our Sponsors */}
+        <OurSponsors />
+        {/* About */}
+        <About />
+        {/* Team */}
+        <Team />
+        {/* Pages */}
+        <Pages />
+        {/* Games */}
+        <Games />
+        {/* shop */}
+        <Shop />
+        {/* searching-panel */}
+        <SearchingPanel />
+        {/* footer */}
+        <Footer />
+      </div>
     </div>
-  );
-}
+  )
+};
 
-export default App;
+export default App 
